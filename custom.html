@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    Array.prototype.myPop = function() {
+        let val = this[this.length - 1]
+        delete this[this.length - 1]
+        this.length = this.length - 1
+        return val 
+    }
+    Array.prototype.myPush = function(value) {
+        
+        this[this.length] = value 
+    }
+
+    Array.prototype.myforEach = function(func) {
+        for(let i = 0; i < this.length; i++) {
+            func(this[i])
+        }
+    }
+    
+    Array.prototype.myMap = function(func) {
+        let new_arr = []
+        for(let i of this) {
+            new_arr.push(func(i))
+        }
+        return new_arr 
+    }
+    
+
+    
+    
+    
+
+</script>
